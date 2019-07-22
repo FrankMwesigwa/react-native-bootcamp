@@ -16,6 +16,11 @@ import NewsDetails from '../modules/News/newsDetail';
 import Users from '../modules/Users';
 import AddUser from '../modules/Users/addUser';
 
+import BoardScreen from '../modules/Todos/Board';
+import BoardDetailScreen from '../modules/Todos/BoardDetails';
+import AddBoardScreen from '../modules/Todos/AddBoard';
+import EditBoardScreen from '../modules/Todos/EditBoard';
+
 const headerConfig = {
   headerLayoutPreset: 'center',
   defaultNavigationOptions: {
@@ -43,10 +48,21 @@ const userStack = createStackNavigator(
   headerConfig
 );
 
+const TodoStack = createStackNavigator(
+  {
+    BoardScreen,
+    BoardDetailScreen,
+    AddBoardScreen,
+    EditBoardScreen
+  },
+  headerConfig
+);
+
 const AppStack = createBottomTabNavigator(
   {
     News: newsStack,
-    Users: userStack
+    Users: userStack,
+    Todo: TodoStack
   },
   {
     tabBarOptions: {
@@ -66,6 +82,8 @@ const AppStack = createBottomTabNavigator(
         if (routeName === 'News') {
           iconName = 'home';
         } else if (routeName === 'Users') {
+          iconName = 'user';
+        } else if (routeName === 'Todo') {
           iconName = 'user';
         }
 
