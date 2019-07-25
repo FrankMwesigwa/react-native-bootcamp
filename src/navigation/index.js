@@ -4,9 +4,9 @@ import React, { Component } from 'react';
 import { View, Image, TouchableOpacity } from 'react-native';
 import { createDrawerNavigator, createStackNavigator, createAppContainer } from 'react-navigation';
 
-import Screen1 from './src/pages/screen1';
-import Screen2 from './src/pages/screen2';
-import Screen3 from './src/pages/screen3';
+import Screen1 from '../pages/screen1';
+import Screen2 from '../pages/screen2';
+import Screen3 from '../pages/screen3';
 
 class NavigationDrawerStructure extends Component {
   toggleDrawer = () => {
@@ -16,9 +16,9 @@ class NavigationDrawerStructure extends Component {
   render() {
     return (
       <View style={{ flexDirection: 'row' }}>
-        <TouchableOpacity onPress={this.toggleDrawer}>
+        <TouchableOpacity onPress={this.toggleDrawer()}>
           <Image
-            source={require('./src/images/drawer-150x150.png')}
+            source={require('../images/drawer-150x150.png')}
             style={{ width: 25, height: 25, marginLeft: 5 }}
           />
         </TouchableOpacity>
