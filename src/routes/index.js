@@ -1,101 +1,38 @@
-/* eslint-disable react/prop-types */
-import React from 'react';
+import { Dimensions } from 'react-native';
 import {
   createStackNavigator,
-  createBottomTabNavigator,
   createSwitchNavigator,
-  createAppContainer
+  createAppContainer,
+  createDrawerNavigator
 } from 'react-navigation';
-import Icon from 'react-native-vector-icons/AntDesign';
 
-import Login from '../modules/Login';
+import TravelingSideMenu from '../modules/SideMenu';
+import IntroductionScreen from '../modules/IntroductionScreen';
+import SignUpSignIn from '../modules/SignUpSignIn';
+import Destinations from '../modules/Destinations';
+import DestinationsDetails from '../modules/DestinationsDetails';
+import YourDetails from '../modules/YourDetails';
+import PaymentDetails from '../modules/PaymentDetails';
 
-import News from '../modules/News';
-import NewsDetails from '../modules/News/newsDetail';
-
-import Users from '../modules/Users';
-import AddUser from '../modules/Users/addUser';
-
-import BoardScreen from '../modules/Todos/Board';
-import BoardDetailScreen from '../modules/Todos/BoardDetails';
-import AddBoardScreen from '../modules/Todos/AddBoard';
-import EditBoardScreen from '../modules/Todos/EditBoard';
-
-const headerConfig = {
-  headerLayoutPreset: 'center',
-  defaultNavigationOptions: {
-    headerStyle: {
-      backgroundColor: '#001338'
-    },
-    headerTintColor: '#fff',
-    headerTitle: 'Jupa App'
-  }
-};
-
-const newsStack = createStackNavigator(
+const DrawerStack = createDrawerNavigator(
   {
-    News,
-    NewsDetails
-  },
-  headerConfig
-);
-
-const userStack = createStackNavigator(
-  {
-    Users,
-    AddUser
-  },
-  headerConfig
-);
-
-const TodoStack = createStackNavigator(
-  {
-    BoardScreen,
-    BoardDetailScreen,
-    AddBoardScreen,
-    EditBoardScreen
-  },
-  headerConfig
-);
-
-const AppStack = createBottomTabNavigator(
-  {
-    News: newsStack,
-    Users: userStack,
-    Todo: TodoStack
+    IntroductionScreen,
+    SignUpSignIn,
+    Destinations,
+    DestinationsDetails,
+    YourDetails,
+    PaymentDetails
   },
   {
-    tabBarOptions: {
-      activeTintColor: '#fff',
-      showLabel: false,
-      activeBackgroundColor: '#00194b',
-      inactiveBackgroundColor: '#001338',
-      style: {
-        backgroundColor: '#001338'
-      }
-    },
-    initialRouteName: 'News',
-    defaultNavigationOptions: ({ navigation }) => ({
-      tabBarIcon: ({ tintColor }) => {
-        const { routeName } = navigation.state;
-        let iconName;
-        if (routeName === 'News') {
-          iconName = 'home';
-        } else if (routeName === 'Users') {
-          iconName = 'user';
-        } else if (routeName === 'Todo') {
-          iconName = 'user';
-        }
-
-        return <Icon name={iconName} size={25} color={tintColor} />;
-      }
-    })
+    gesturesEnabled: false,
+    contentComponent: TravelingSideMenu,
+    drawerWidth: Dimensions.get('window').width - 50
   }
 );
 
-const AuthStack = createStackNavigator(
+const DrawerNavigation = createStackNavigator(
   {
-    Login
+    DrawerStack
   },
   {
     headerMode: 'none'
@@ -104,14 +41,8 @@ const AuthStack = createStackNavigator(
 
 export const rootNavigator = () => {
   return createAppContainer(
-    createSwitchNavigator(
-      {
-        App: AppStack,
-        Auth: AuthStack
-      },
-      {
-        initialRouteName: 'App'
-      }
-    )
+    createSwitchNavigator({
+      Drawer: DrawerNavigation
+    })
   );
 };
