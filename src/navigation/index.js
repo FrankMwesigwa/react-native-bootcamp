@@ -1,93 +1,41 @@
-/* eslint-disable global-require */
-/* eslint-disable react/prop-types */
-import React, { Component } from 'react';
-import { View, Image, TouchableOpacity } from 'react-native';
-import { createDrawerNavigator, createStackNavigator, createAppContainer } from 'react-navigation';
+import { Dimensions } from 'react-native';
+import {
+  createAppContainer,
+  createDrawerNavigator,
+  createStackNavigator,
+  createSwitchNavigator
+} from 'react-navigation';
 
-import Screen1 from '../pages/screen1';
-import Screen2 from '../pages/screen2';
-import Screen3 from '../pages/screen3';
+import IntroScreen from '../modules/IntroductionScreen';
+import LoginScreen from '../modules/SignUpSignIn';
+import Destinations from '../modules/Destinations';
+import SideMenu from '../modules/SideMenu';
 
-class NavigationDrawerStructure extends Component {
-  toggleDrawer = () => {
-    this.props.navigationProps.toggleDrawer();
-  };
-
-  render() {
-    return (
-      <View style={{ flexDirection: 'row' }}>
-        <TouchableOpacity onPress={this.toggleDrawer()}>
-          <Image
-            source={require('../images/drawer-150x150.png')}
-            style={{ width: 25, height: 25, marginLeft: 5 }}
-          />
-        </TouchableOpacity>
-      </View>
-    );
-  }
-}
-
-const FirstActivity_StackNavigator = createStackNavigator({
-  First: {
-    screen: Screen1,
-    navigationOptions: ({ navigation }) => ({
-      title: 'Demo Screen 1',
-      headerLeft: <NavigationDrawerStructure navigationProps={navigation} />,
-      headerStyle: {
-        backgroundColor: '#FF9800'
-      },
-      headerTintColor: '#fff'
-    })
-  }
-});
-
-const Screen2_StackNavigator = createStackNavigator({
-  Second: {
-    screen: Screen2,
-    navigationOptions: ({ navigation }) => ({
-      title: 'Demo Screen 2',
-      headerLeft: <NavigationDrawerStructure navigationProps={navigation} />,
-      headerStyle: {
-        backgroundColor: '#FF9800'
-      },
-      headerTintColor: '#fff'
-    })
-  }
-});
-
-const Screen3_StackNavigator = createStackNavigator({
-  Third: {
-    screen: Screen3,
-    navigationOptions: ({ navigation }) => ({
-      title: 'Demo Screen 3',
-      headerLeft: <NavigationDrawerStructure navigationProps={navigation} />,
-      headerStyle: {
-        backgroundColor: '#FF9800'
-      },
-      headerTintColor: '#fff'
-    })
-  }
-});
-
-const DrawerNavigatorExample = createDrawerNavigator({
-  Screen1: {
-    screen: FirstActivity_StackNavigator,
-    navigationOptions: {
-      drawerLabel: 'Demo Screen 1'
-    }
+const MainDrawer = createDrawerNavigator(
+  {
+    Destinations
   },
-  Screen2: {
-    screen: Screen2_StackNavigator,
-    navigationOptions: {
-      drawerLabel: 'Demo Screen 2'
-    }
+  {
+    gesturesEnabled: false,
+    contentComponent: SideMenu,
+    drawerWidth: Dimensions.get('window').width - 50
+  }
+);
+
+const DrawerNavigation = createStackNavigator({
+  MainDrawer
+});
+
+const MainNavigation = createSwitchNavigator({
+  Intro: {
+    screen: IntroScreen
   },
-  Screen3: {
-    screen: Screen3_StackNavigator,
-    navigationOptions: {
-      drawerLabel: 'Demo Screen 3'
-    }
+  Auth: {
+    screen: LoginScreen
+  },
+  App: {
+    screen: DrawerNavigation
   }
 });
 
-export default createAppContainer(DrawerNavigatorExample);
+export default createAppContainer(MainNavigation);

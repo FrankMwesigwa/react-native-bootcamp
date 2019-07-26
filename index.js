@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose } from 'redux';
 import promiseMiddleware from 'redux-promise';
 import { name as appName } from './app.json';
-import App from './App';
+import MainApp from './App';
 
 import reducer from './src/store/reducers';
 
@@ -19,7 +19,7 @@ const createStoreWithMiddleware = createStore(
 
 const appRedux = () => (
   <Provider store={createStoreWithMiddleware}>
-    <App />
+    <MainApp />
   </Provider>
 );
 
