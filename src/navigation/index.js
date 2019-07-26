@@ -10,10 +10,20 @@ import IntroScreen from '../modules/IntroductionScreen';
 import LoginScreen from '../modules/SignUpSignIn';
 import Destinations from '../modules/Destinations';
 import SideMenu from '../modules/SideMenu';
+import Review from '../modules/Review';
+import PlaceDetails from '../modules/PlaceDetails';
+import YourDetails from '../modules/YourDetails';
+import PaymentDetails from '../modules/PaymentDetails';
+import PayWithCreditCard from '../modules/PayWithCreditCard';
 
 const MainDrawer = createDrawerNavigator(
   {
-    Destinations
+    Destinations,
+    Review,
+    PlaceDetails,
+    YourDetails,
+    PaymentDetails,
+    PayWithCreditCard
   },
   {
     gesturesEnabled: false,
