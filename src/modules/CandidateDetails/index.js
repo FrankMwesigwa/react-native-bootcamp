@@ -255,7 +255,7 @@ export default class YourDetails extends Component {
         </View>
         <View>
           <TouchableOpacity style={styles.creatacoountmain} onPress={() => this.RenderScreen()}>
-            <Text style={styles.creataccounttext}>BOOK THIS TRIP NOW</Text>
+            <Text style={styles.creataccounttext}>Hire For Work</Text>
           </TouchableOpacity>
         </View>
       </View>

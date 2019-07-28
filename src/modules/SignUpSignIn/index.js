@@ -181,7 +181,7 @@ class SignUpSignIn extends Component {
 
             <TouchableOpacity
               style={styles.creatacoountmain}
-              onPress={() => this.props.navigation.navigate('Destinations')}>
+              onPress={() => this.props.navigation.navigate('Candidates')}>
               <Text style={styles.creataccounttext}>Sign In</Text>
             </TouchableOpacity>
           </KeyboardAwareScrollView>

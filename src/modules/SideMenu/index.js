@@ -10,19 +10,19 @@ import { Images } from '../../Themes';
 const MenuItems = [
   {
     id: 1,
-    name: 'Destinations'
+    name: 'Candidates'
   },
   {
     id: 2,
-    name: 'My Trips'
+    name: 'Assessor'
   },
   {
     id: 3,
-    name: 'Trip Guides'
+    name: 'Assessments'
   },
   {
     id: 4,
-    name: 'Discover'
+    name: 'Institutions'
   },
   {
     id: 5,
@@ -43,20 +43,20 @@ class SideMenu extends Component {
 
   menuItemClickHandle(index) {
     if (index === 0) {
-      this.props.navigation.navigate('Destinations');
+      this.props.navigation.navigate('Candidates');
     } else if (index === 1) {
-      this.props.navigation.navigate('PlaceDetails', {
-        screenName: 'Destinations'
+      this.props.navigation.navigate('CandidateDetails', {
+        screenName: 'Candidates'
       });
     } else if (index === 2) {
       this.props.navigation.navigate('TripGuides');
     } else if (index === 3) {
       this.props.navigation.navigate('Discover');
     } else if (index === 4) {
-      this.props.navigation.navigate('Review', { screenName: 'Destinations' });
+      this.props.navigation.navigate('Review', { screenName: 'Candidates' });
     } else if (index === 5) {
       this.props.navigation.navigate('GuideProfile', {
-        screenName: 'Destinations'
+        screenName: 'Candidates'
       });
     }
     this.props.navigation.closeDrawer();
@@ -84,8 +84,8 @@ class SideMenu extends Component {
         <View style={styles.locationView}>
           <Entypo name="location-pin" size={25} color="#BDBDBD" />
           <Text style={styles.locationText}>
-            Current location:
-            <Text style={{ color: '#e91e63' }}> Manhattan, NY</Text>
+            Technical Institute:
+            <Text style={{ color: '#e91e63' }}> Makerere Unveristy</Text>
           </Text>
         </View>
 

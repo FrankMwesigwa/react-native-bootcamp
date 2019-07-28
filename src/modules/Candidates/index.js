@@ -9,34 +9,34 @@ import LinearGradient from 'react-native-linear-gradient';
 import { Images } from '../../Themes';
 import styles from './styles';
 
-class Destinations extends Component {
+class Candidates extends Component {
   state = {
     destinationArray: [
       {
         id: 1,
-        destinationname: 'Wonderful Mexico',
+        destinationname: 'Frank Mwesigwa',
         img: Images.mexico
       },
       {
         id: 2,
-        destinationname: 'Treasure of Egypt',
+        destinationname: 'Deus Abigaba',
         img: Images.egypt
       },
       {
         id: 3,
-        destinationname: 'Love in Paris',
+        destinationname: 'Mark Musiime',
         img: Images.love_paris
       },
       {
         id: 4,
-        destinationname: 'Wonderful Mexico',
+        destinationname: 'Maxi Okunda',
         img: Images.mexico
       }
     ]
   };
 
   RenderNavigation = () => {
-    this.props.navigation.navigate('DestinationsDetails');
+    this.props.navigation.navigate('CandidateDetails');
   };
 
   NavigationRenderScreen = () => {
@@ -59,7 +59,7 @@ class Destinations extends Component {
               </TouchableOpacity>
             </Left>
             <Body style={styles.body}>
-              <Title style={styles.headertitle}>Destinations</Title>
+              <Title style={styles.headertitle}>Candidates</Title>
             </Body>
             <Right style={styles.right}>
               <TouchableOpacity onPress={() => this.NavigationRenderScreen()}>
@@ -95,4 +95,4 @@ class Destinations extends Component {
   }
 }
 
-export default Destinations;
+export default Candidates;

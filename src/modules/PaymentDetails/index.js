@@ -26,7 +26,7 @@ class PaymentDetails extends Component {
   };
 
   NavigationRenderScreen = () => {
-    this.props.navigation.navigate('YourDetails');
+    this.props.navigation.navigate('CandidateDetails');
   };
 
   RenderScreen = () => {
@@ -42,7 +42,7 @@ class PaymentDetails extends Component {
   }
 
   handleBackPress = () => {
-    this.props.navigation.navigate('YourDetails');
+    this.props.navigation.navigate('CandidateDetails');
     return true;
   };
 

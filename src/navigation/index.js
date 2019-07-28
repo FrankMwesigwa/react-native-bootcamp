@@ -6,22 +6,22 @@ import {
   createSwitchNavigator
 } from 'react-navigation';
 
-import IntroScreen from '../modules/IntroductionScreen';
+import IntroScreen from '../modules/WelcomeScreen';
 import LoginScreen from '../modules/SignUpSignIn';
-import Destinations from '../modules/Destinations';
+import Candidates from '../modules/Candidates';
 import SideMenu from '../modules/SideMenu';
 import Review from '../modules/Review';
 import PlaceDetails from '../modules/PlaceDetails';
-import YourDetails from '../modules/YourDetails';
+import CandidateDetails from '../modules/CandidateDetails';
 import PaymentDetails from '../modules/PaymentDetails';
 import PayWithCreditCard from '../modules/PayWithCreditCard';
 
 const MainDrawer = createDrawerNavigator(
   {
-    Destinations,
+    Candidates,
     Review,
     PlaceDetails,
-    YourDetails,
+    CandidateDetails,
     PaymentDetails,
     PayWithCreditCard
   },
