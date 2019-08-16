@@ -8,19 +8,19 @@ import styles from './style';
 const swiperData = [
   {
     id: 1,
-    description: 'Making friends is easy as waving your hand back and forth in easy step.'
+    description: 'Uganda Masons Ranking and Certification Mobile App.'
   },
   {
     id: 2,
-    description: 'Making friends is easy as waving your hand back and forth in easy step..'
+    description: 'Ranking Ugandas Top Technical workers'
   },
   {
     id: 3,
-    description: 'Making friends is easy as waving your hand back and forth in easy step...'
+    description: 'Providing employment opportunties and linking masons to technical jobs...'
   },
   {
     id: 4,
-    description: 'Making friends is easy as waving your hand back and forth in easy step....'
+    description: 'Enabling DIT to certify those who have passed the examinations....'
   }
 ];
 
@@ -43,7 +43,7 @@ class IntroductionScreen extends Component {
           <Swiper
             showsButtons={false}
             autoplay
-            autoplayTimeout={2.5}
+            autoplayTimeout={5}
             activeDot={<View style={styles.activeDot} />}
             dot={<View style={styles.dot} />}>
             {swiperData.map((item, index) => {

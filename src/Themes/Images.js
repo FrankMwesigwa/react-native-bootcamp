@@ -8,6 +8,7 @@ const images = {
   puerto: require('../Images/ic_puerto.jpg'),
   love_paris: require('../Images/ic_love_paris.jpg'),
   ic_background_ptwentyseven: require('../Images/ic_background_ptwentyseven.png'),
+  ic_background_godwin: require('../Images/Godwins.jpg'),
   profile_one: require('../Images/profile_one.png'),
   profileMenu: require('../Images/profileMenu.png'),
   profileBgImg: require('../Images/ic_profile_bg_img.png'),

@@ -13,12 +13,35 @@ import {
 import { Container, Button, Right, Header, Body, Segment } from 'native-base';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
+import { Dropdown } from 'react-native-material-dropdown';
 import styles from './styles';
 import { Images } from '../../Themes';
 
 class SignUpSignIn extends Component {
   state = {
-    segment: 1
+    segment: 1,
+    categories: [
+      {
+        value: 'Mason'
+      },
+      {
+        value: 'Professional'
+      }
+    ],
+    group: [
+      {
+        value: 'Construction'
+      },
+      {
+        value: 'Electrician'
+      },
+      {
+        value: 'Plumber'
+      },
+      {
+        value: 'Painter'
+      }
+    ]
   };
 
   renderActiveComponent = () => {
@@ -122,14 +145,44 @@ class SignUpSignIn extends Component {
                 returnKeyType="done"
               />
             </View>
+            <View style={styles.usernamemain}>
+            <Dropdown
+                        ref="category"
+                        value="Category"
+                        onChangeText={this.onCategoryChange}
+                        data={this.state.categories}
+                        labelHeight={0}
+                        containerStyle={styles.dropdwoncontainer}
+                        textColor="#767676"
+                        dropdownPosition={1}
+                        dropdownMargins={{ min: 12, max: 15 }}
+                        dropdownOffset={{ top: 90, left: 0 }}
+                        onSubmitEditing={event => {
+                          this.refs.age.focus();
+                        }}
+                      />
+              </View>
+              <View style={styles.usernamemain}>
+            <Dropdown
+                        ref="group"
+                        value="Group"
+                        onChangeText={this.onCategoryChange}
+                        data={this.state.group}
+                        labelHeight={0}
+                        containerStyle={styles.dropdwoncontainer}
+                        textColor="#767676"
+                        dropdownPosition={1}
+                        dropdownMargins={{ min: 12, max: 15 }}
+                        dropdownOffset={{ top: 90, left: 0 }}
+                        onSubmitEditing={event => {
+                          this.refs.age.focus();
+                        }}
+                      />
+              </View>
             <TouchableOpacity style={styles.creatacoountmain}>
               <Text style={styles.creataccounttext}>Creat An Account</Text>
             </TouchableOpacity>
 
-            <TouchableOpacity iconRight style={styles.creatacoountmainfacebook}>
-              <FontAwesome name="facebook" size={20} color="#ffffff" />
-              <Text style={styles.signupwithfacebooktext}>Sign Up with Facebook</Text>
-            </TouchableOpacity>
           </KeyboardAwareScrollView>
         </View>
       );

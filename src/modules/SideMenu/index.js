@@ -73,11 +73,11 @@ class SideMenu extends Component {
       <View style={styles.mainView}>
         <View style={styles.headerView}>
           <TouchableOpacity>
-            <Image source={Images.ic_background_ptwentyseven} style={styles.imageProfile} />
+            <Image source={Images.ic_background_godwin} style={styles.imageProfile} />
           </TouchableOpacity>
           <View style={{ paddingLeft: 10 }}>
-            <Text style={[styles.nameText, { paddingBottom: 10 }]}>Frank Mwesigwa</Text>
-            <Text style={styles.nameText}>frank.mwesigwa1@gmail.com</Text>
+            <Text style={[styles.nameText, { paddingBottom: 10 }]}>Twesigye Godwin</Text>
+            <Text style={styles.nameText}>twesigyegodwin@gmail.com</Text>
           </View>
         </View>
 

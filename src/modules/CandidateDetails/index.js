@@ -80,14 +80,14 @@ export default class YourDetails extends Component {
                 </TouchableOpacity>
               </Left>
               <Body style={styles.body}>
-                <Title style={styles.headertitle}>Your Details</Title>
+                <Title style={styles.headertitle}>Candidates Details</Title>
               </Body>
               <Right style={styles.right}>
                 <TouchableOpacity />
               </Right>
             </Header>
             <View style={styles.mainprofilenamebg}>
-              <Image source={Images.ic_background_ptwentyseven} style={styles.profileBgImg} />
+              <Image source={Images.ic_background_godwin} style={styles.profileBgImg} />
               <View style={{ flexDirection: 'column' }}>
                 <View style={{ flexDirection: 'row' }}>
                   <Entypo
@@ -96,9 +96,9 @@ export default class YourDetails extends Component {
                     color="#757575"
                     style={styles.locationIcon}
                   />
-                  <Text style={styles.mexicotext}>Mexico</Text>
+                  <Text style={styles.mexicotext}>Twesigye Godwin</Text>
                 </View>
-                <Text style={styles.nameofdestination}>Cancun Vacation Break</Text>
+                <Text style={styles.nameofdestination}>Makerere University</Text>
 
                 <View style={{ flexDirection: 'row' }}>
                   <EvilIcons name="clock" size={20} color="#757575" style={styles.clockIcon} />
@@ -120,7 +120,7 @@ export default class YourDetails extends Component {
                 extraHeight={100}
                 extraScrollHeight={100}>
                 <View style={styles.YourDetailsMain}>
-                  <Text style={styles.YourDetails}>Your Details</Text>
+                  <Text style={styles.YourDetails}>Your Bio Details</Text>
                   <View style={styles.infoBgView}>
                     <TextInput
                       value="Name"
