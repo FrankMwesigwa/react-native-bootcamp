@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
-import AppNavigator from './src/navigation';
+import NavigationService from './src/Service/Navigation';
+import AppNavigation from './src/Service/mainNavigation';
 
-class App extends Component {
+export default class App extends Component {
   render() {
-    return <AppNavigator />;
+    return (
+      <AppNavigation
+        ref={r => {
+          NavigationService.setTopLevelNavigator(r);
+        }}
+      />
+    );
   }
 }
-
-export default App;
