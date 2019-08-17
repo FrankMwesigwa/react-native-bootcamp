@@ -91,7 +91,7 @@ export default class extends React.Component {
             </Button>
           </View>
           <View style={Style.actionBarMiddle}>
-            <Text style={Style.actionBarText}>{'Create'.toUpperCase()}</Text>
+            <Text style={Style.actionBarText}>Add New Project</Text>
           </View>
           <View style={Style.actionBarRight} />
         </Header>
@@ -238,7 +238,7 @@ export default class extends React.Component {
             <Button
               style={Style.bgBot}
               onPress={() => {
-                NavigationService.navigate('PublicHome');
+                NavigationService.navigate('MemberHome');
               }}>
               <Icon name="home" type="FontAwesome" style={Style.textBlue} />
             </Button>

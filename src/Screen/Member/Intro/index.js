@@ -16,19 +16,19 @@ const styles = StyleSheet.create({
 
 const slides = [
   {
-    title: 'Search Property',
-    text: 'Find and select your suitable property',
+    title: 'Search For a Candiate',
+    text: 'Find and select your suitable candiate for a job',
     image: require('../../../../assets/images/1.png'),
     imageStyle: styles.image
   },
   {
-    title: 'Home Loan',
-    text: 'We can help you find a loan. Call us on +123 456789',
+    title: 'Find a Manson and Get Paid',
+    text: 'We can help you find a Mason for your problem. Call us on +256 0001000',
     image: require('../../../../assets/images/2.png'),
     imageStyle: styles.image
   },
   {
-    title: 'Sell or Stay?',
+    title: 'Sell Your Technical Services?',
     text: "Decide if it's time for you to sell with our expert advice",
     image: require('../../../../assets/images/3.png'),
     imageStyle: styles.image

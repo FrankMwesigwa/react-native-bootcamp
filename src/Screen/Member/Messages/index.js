@@ -38,7 +38,7 @@ export default class extends React.Component {
             </Button>
           </View>
           <View style={Style.actionBarMiddle}>
-            <Text style={Style.actionBarText}>{'Messages'.toUpperCase()}</Text>
+            <Text style={Style.actionBarText}>Notifications</Text>
           </View>
           <View style={Style.actionBarRight} />
         </Header>

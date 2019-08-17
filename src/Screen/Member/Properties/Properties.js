@@ -1,23 +1,23 @@
 const Entry = [
   {
-    price: '$4,850,000',
-    location: 'Bristol, England',
+    price: 'Repair of broken windows for the majors house',
+    location: 'Jinja, Kampala',
     bedroom: '2',
     bathroom: '2',
     area: '4600 sq.ft',
     image: 'https://houseofhargrove.com/wp-content/uploads/2017/10/Beautiful-Exteriors1.jpg'
   },
   {
-    price: '$2,850,000',
-    location: 'Edinburgh, England',
+    price: 'Installation of water heater',
+    location: 'Ntinda',
     bedroom: '5',
     bathroom: '5',
     area: '4600 sq.ft',
     image: 'https://houseofhargrove.com/wp-content/uploads/2017/10/Beautiful-Exteriors13.png'
   },
   {
-    price: '$3,850,000',
-    location: 'Liverpool, England',
+    price: 'Cutting of Grasses',
+    location: 'Muyenga, Kampala',
     bedroom: '3',
     bathroom: '2',
     area: '4600 sq.ft',
@@ -25,16 +25,16 @@ const Entry = [
   },
 
   {
-    price: '$3,850,000',
-    location: 'Birmingham, England',
+    price: 'Construction of perimeter wall',
+    location: 'Nasana',
     bedroom: '3',
     bathroom: '2',
     area: '4600 sq.ft',
     image: 'https://houseofhargrove.com/wp-content/uploads/2017/10/Beautiful-Exteriors6.jpg'
   },
   {
-    price: '$4,850,000',
-    location: 'Manchester, England',
+    price: 'Construction and fixing of main gate',
+    location: 'Mbarara',
     bedroom: '2',
     bathroom: '2',
     area: '4600 sq.ft',

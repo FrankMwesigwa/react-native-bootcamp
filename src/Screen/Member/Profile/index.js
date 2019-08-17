@@ -17,13 +17,9 @@ import Styles from './Style';
 import NavigationService from '../../../Service/Navigation';
 
 export default class extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      gender: null
-    };
-  }
+  state = {
+    gender: null
+  };
 
   renderAccordionHeader = (item, expanded) => {
     return (
@@ -36,14 +32,14 @@ export default class extends React.Component {
         )}
       </View>
     );
-  }
+  };
 
-  renderAccordionContent(item) {
+  renderAccordionContent = item => {
     const fn = `renderAccordionContent${item.type.charAt(0).toUpperCase() + item.type.substr(1)}`;
     return <View style={Styles.accordionContent}>{this[fn]()}</View>;
-  }
+  };
 
-  renderAccordionContentBasic() {
+  renderAccordionContentBasic = () => {
     return (
       <View>
         <View style={Styles.col}>
@@ -101,7 +97,7 @@ export default class extends React.Component {
         </Button>
       </View>
     );
-  }
+  };
 
   renderAccordionContentContact = () => {
     return (
@@ -120,7 +116,7 @@ export default class extends React.Component {
         </Button>
       </View>
     );
-  }
+  };
 
   renderAccordionContentSocial = () => {
     return (
@@ -139,7 +135,7 @@ export default class extends React.Component {
         </Button>
       </View>
     );
-  }
+  };
 
   render() {
     return (
@@ -151,7 +147,8 @@ export default class extends React.Component {
             <ImageBackground
               source={{ uri: 'https://cdn.stocksnap.io/img-thumbs/960w/ZUAZ22R9AL.jpg' }}
               imageStyle="cover"
-              style={Styles.coverImg} />
+              style={Styles.coverImg}
+            />
 
             <View style={Styles.bgBlue} />
 
@@ -171,8 +168,8 @@ export default class extends React.Component {
                 </Button>
               </View>
               <View style={Styles.ownerInfo}>
-                <Text style={Styles.ownerName}>Kent Parker</Text>
-                <Text style={Styles.ownerLocation}>Liverpool, United Kingdom</Text>
+                <Text style={Styles.ownerName}>Godwin</Text>
+                <Text style={Styles.ownerLocation}>Makerere Unveristy</Text>
               </View>
             </View>
 
@@ -226,7 +223,7 @@ export default class extends React.Component {
             <Button
               style={Style.bgBot}
               onPress={() => {
-                NavigationService.navigate('PublicHome');
+                NavigationService.navigate('MemberHome');
               }}>
               <Icon name="home" type="FontAwesome" style={Style.textBlue} />
             </Button>

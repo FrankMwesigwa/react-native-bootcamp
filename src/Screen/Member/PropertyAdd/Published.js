@@ -1,50 +1,17 @@
-import React from 'react';;
-import {
-  StatusBar,
-  TouchableOpacity,
-  TouchableHighlight,
-  TextInput,
-  StyleSheet,
-  Image,
-  ImageBackground,
-  Dimensions,
-  ScrollView,
-  Picker,
-  Platform,
-  SafeAreaView,
-  View,
-  FlatList
-} from 'react-native';;
-import {
-  Container,
-  Header,
-  Content,
-  Button,
-  Icon,
-  Text,
-  Col,
-  Title,
-  Left,
-  Right,
-  Body,
-  Input,
-  Item,
-  Footer,
-  FooterTab,
-  Label,
-  Badge,
-  Grid
-} from 'native-base';;
-import RadioGroup from 'react-native-custom-radio-group';;
+import React from 'react';
+import { StatusBar, View } from 'react-native';
 
-import NavigationService from '../../../Service/Navigation';;
+import { Container, Header, Content, Button, Icon, Text, Footer, FooterTab } from 'native-base';
 
-import Style from '../../../Theme/Style';;
-import Styles from './Style';;
+import NavigationService from '../../../Service/Navigation';
+
+import Style from '../../../Theme/Style';
+
+import Styles from './Style';
 
 export default class extends React.Component {
   constructor(props) {
-    super(props);;
+    super(props);
 
     this.state = {
       country: null
@@ -62,7 +29,7 @@ export default class extends React.Component {
               transparent
               style={Style.actionBarBtn}
               onPress={() => {
-                NavigationService.navigate('MemberPropertyAddPhotos');;
+                NavigationService.navigate('MemberPropertyAddPhotos');
               }}>
               <Icon
                 active
@@ -75,7 +42,7 @@ export default class extends React.Component {
           <View style={Style.actionBarMiddle}>
             <Text style={Style.actionBarText}>{'Published'.toUpperCase()}</Text>
           </View>
-          <View style={Style.actionBarRight}></View>
+          <View style={Style.actionBarRight} />
         </Header>
 
         <Content style={Styles.layoutInner} contentContainerStyle={Style.layoutContent}>
@@ -94,7 +61,7 @@ export default class extends React.Component {
                 transparent
                 style={Styles.publishBtn}
                 onPress={() => {
-                  NavigationService.navigate('PublicPropertyDetail');;
+                  NavigationService.navigate('PublicPropertyDetail');
                 }}>
                 <Icon name="eye" type="FontAwesome" style={Styles.publishBtnIcon} />
                 <Text style={Styles.publishBtnText}>Preview</Text>
@@ -108,35 +75,35 @@ export default class extends React.Component {
             <Button
               style={Style.bgBot}
               onPress={() => {
-                NavigationService.navigate('PublicHome');;
+                NavigationService.navigate('MemberHome');
               }}>
               <Icon name="home" type="FontAwesome" style={Style.textBlue} />
             </Button>
             <Button
               style={Style.bgBot}
               onPress={() => {
-                NavigationService.navigate('PublicPropertySearch');;
+                NavigationService.navigate('PublicPropertySearch');
               }}>
               <Icon name="search" type="Octicons" style={Style.textBlue} />
             </Button>
             <Button
               style={Style.bgBot}
               onPress={() => {
-                NavigationService.navigate('MemberHome');;
+                NavigationService.navigate('MemberHome');
               }}>
               <Icon name="user" type="FontAwesome" style={Style.textActive} />
             </Button>
             <Button
               style={Style.bgBot}
               onPress={() => {
-                NavigationService.navigate('MemberFavorites');;
+                NavigationService.navigate('MemberFavorites');
               }}>
               <Icon name="heart" type="FontAwesome" style={Style.textBlue} />
             </Button>
             <Button
               style={Style.bgBot}
               onPress={() => {
-                NavigationService.navigate('MemberMessages');;
+                NavigationService.navigate('MemberMessages');
               }}>
               <Icon name="bell" type="Entypo" style={Style.textBlue} />
             </Button>

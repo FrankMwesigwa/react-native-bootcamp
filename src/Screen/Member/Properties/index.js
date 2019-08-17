@@ -42,7 +42,7 @@ export default class extends React.Component {
             </Button>
           </View>
           <View style={Style.actionBarMiddle}>
-            <Text style={Style.actionBarText}>{'Properties'.toUpperCase()}</Text>
+            <Text style={Style.actionBarText}>My Projects Worked on</Text>
           </View>
           <View style={Style.actionBarRight}>
             <Button
@@ -81,14 +81,6 @@ export default class extends React.Component {
                           <Text style={Styles.itemLocation}>{item.location}</Text>
                         </View>
                       </View>
-                      <View style={Styles.itemOverview}>
-                        <Icon name="bed" type="FontAwesome" style={Styles.itemIcon} />
-                        <Text style={Styles.itemNo}>{item.bedroom}</Text>
-                      </View>
-                      <View style={Styles.itemOverview}>
-                        <Icon name="bathtub" type="FontAwesome" style={Styles.itemIcon} />
-                        <Text style={Styles.itemNo}>{item.bathroom}</Text>
-                      </View>
                     </View>
                     <View style={Styles.itemRowIcon}>
                       <View style={Styles.itemLeft}>
@@ -117,7 +109,7 @@ export default class extends React.Component {
             <Button
               style={Style.bgBot}
               onPress={() => {
-                NavigationService.navigate('PublicHome');
+                NavigationService.navigate('MemberHome');
               }}>
               <Icon name="home" type="FontAwesome" style={Style.textBlue} />
             </Button>

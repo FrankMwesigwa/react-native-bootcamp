@@ -60,8 +60,8 @@ export default class extends React.Component {
                 style={Styles.avatar}
               />
               <View>
-                <Text style={Styles.profileName}>Hey Kent Parker!</Text>
-                <Text style={Styles.profileLocation}>Liverpool, United Kingdom</Text>
+                <Text style={Styles.profileName}>Hey Godwin James!</Text>
+                <Text style={Styles.profileLocation}>Kampala, Uganda</Text>
               </View>
             </View>
 
@@ -82,7 +82,7 @@ export default class extends React.Component {
                   resizeMode="cover"
                   style={Styles.btnImg}
                 />
-                <Text style={Styles.btnText}>Properties</Text>
+                <Text style={Styles.btnText}>My Projects</Text>
               </TouchableOpacity>
 
               <TouchableOpacity
@@ -94,7 +94,7 @@ export default class extends React.Component {
                   source={require('../../../../assets/images/btn-messages.png')}
                   style={Styles.btnImg}
                 />
-                <Text style={Styles.btnText}>Messages</Text>
+                <Text style={Styles.btnText}>Notifications</Text>
               </TouchableOpacity>
 
               <TouchableOpacity
@@ -118,7 +118,7 @@ export default class extends React.Component {
                   source={require('../../../../assets/images/btn-favorites.png')}
                   style={Styles.btnImg}
                 />
-                <Text style={Styles.btnText}>Favorites</Text>
+                <Text style={Styles.btnText}>Assessment Results</Text>
               </TouchableOpacity>
 
               <TouchableOpacity

@@ -90,7 +90,7 @@ export default class extends React.Component {
             </Button>
           </View>
           <View style={Style.actionBarMiddle}>
-            <Text style={Style.actionBarText}>{'Create'.toUpperCase()}</Text>
+            <Text style={Style.actionBarText}>Add New Project</Text>
           </View>
           <View style={Style.actionBarRight} />
         </Header>
@@ -112,21 +112,20 @@ export default class extends React.Component {
 
           <View style={Styles.section}>
             <View style={Styles.row}>
-              <Label style={Styles.label}>Property Name</Label>
-              <TextInput
-                style={Styles.textInput}
-                placeholder="e.g. 5 Bed Luxury Home near London"
-              />
+              <Label style={Styles.label}>Project Name</Label>
+              <TextInput style={Styles.textInput} placeholder="e.g. Repair of Television set" />
             </View>
             <View style={Styles.row}>
-              <Label style={Styles.label}>Property Type</Label>
+              <Label style={Styles.label}>Project Category</Label>
               <View style={Styles.bgGrey}>
                 <Picker
                   selectedValue={this.state.ptype}
                   height={20}
                   onValueChange={(itemValue, itemIndex) => this.setState({ ptype: itemValue })}>
-                  <Picker.Item label="House" value="house" />
-                  <Picker.Item label="Apartment" value="apartment" style={Styles.pickerText} />
+                  <Picker.Item label="construction" value="construction" />
+                  <Picker.Item label="plumbering" value="plumbering" />
+                  <Picker.Item label="electrician" value="electrician" />
+                  <Picker.Item label="menanics" value="menanics" style={Styles.pickerText} />
                 </Picker>
               </View>
             </View>
@@ -141,7 +140,7 @@ export default class extends React.Component {
               />
             </View>
             <View style={Styles.row}>
-              <Label style={Styles.label}>Bedroom</Label>
+              <Label style={Styles.label}>Rating</Label>
               <RadioGroup
                 containerStyle={Styles.noBg}
                 initialValue="no_3"
@@ -155,7 +154,7 @@ export default class extends React.Component {
               />
             </View>
             <View style={Styles.row}>
-              <Label style={Styles.label}>Bathroom</Label>
+              <Label style={Styles.label}>Completion Rate</Label>
               <RadioGroup
                 containerStyle={Styles.noBg}
                 initialValue="no_2"
@@ -203,7 +202,7 @@ export default class extends React.Component {
             <Button
               style={Style.bgBot}
               onPress={() => {
-                NavigationService.navigate('PublicHome');
+                NavigationService.navigate('MemberHome');
               }}>
               <Icon name="home" type="FontAwesome" style={Style.textBlue} />
             </Button>

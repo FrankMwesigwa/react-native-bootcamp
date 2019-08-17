@@ -91,7 +91,7 @@ export default class extends React.Component {
             </Button>
           </View>
           <View style={Style.actionBarMiddle}>
-            <Text style={Style.actionBarText}>{'Create'.toUpperCase()}</Text>
+            <Text style={Style.actionBarText}>Add New Project - Location</Text>
           </View>
           <View style={Style.actionBarRight} />
         </Header>
@@ -114,32 +114,34 @@ export default class extends React.Component {
           <View style={Styles.section}>
             <View style={Styles.row}>
               <Label style={Styles.label}>Address</Label>
-              <TextInput style={Styles.textInput} placeholder="e.g. 3-277-10, 1st Street" />
+              <TextInput style={Styles.textInput} placeholder="e.g. plot 1245, Muyenga" />
             </View>
             <View style={Styles.row}>
               <Label style={Styles.label}>City</Label>
-              <TextInput style={Styles.textInput} placeholder="e.g. Streatham" />
+              <TextInput style={Styles.textInput} placeholder="e.g. Mbale" />
             </View>
             <View style={Styles.row}>
-              <Label style={Styles.label}>State</Label>
-              <TextInput style={Styles.textInput} placeholder="e.g. London" />
+              <Label style={Styles.label}>Village</Label>
+              <TextInput style={Styles.textInput} placeholder="e.g. Kicwamba" />
             </View>
 
             <View style={Styles.rowInline}>
               <View style={Styles.col}>
                 <Label style={Styles.label}>Postcode</Label>
-                <TextInput style={Styles.textInput} placeholder="e.g. SW16" />
+                <TextInput style={Styles.textInput} placeholder="e.g. 256" />
               </View>
               <View style={Styles.col} />
             </View>
             <View style={Styles.row}>
-              <Label style={Styles.label}>Country</Label>
+              <Label style={Styles.label}>District</Label>
               <View style={Styles.bgGrey}>
                 <Picker
                   selectedValue={this.state.country}
                   onValueChange={(itemValue, itemIndex) => this.setState({ country: itemValue })}>
-                  <Picker.Item label="United Kingdom" value="uk" />
-                  <Picker.Item label="Spain" value="es" style={Styles.pickerText} />
+                  <Picker.Item label="Kampala" value="uk" />
+                  <Picker.Item label="Mpigi" value="uk" />
+                  <Picker.Item label="Mbarara" value="uk" />
+                  <Picker.Item label="Masaka" value="es" style={Styles.pickerText} />
                 </Picker>
               </View>
             </View>
@@ -174,7 +176,7 @@ export default class extends React.Component {
             <Button
               style={Style.bgBot}
               onPress={() => {
-                NavigationService.navigate('PublicHome');
+                NavigationService.navigate('MemberHome');
               }}>
               <Icon name="home" type="FontAwesome" style={Style.textBlue} />
             </Button>
