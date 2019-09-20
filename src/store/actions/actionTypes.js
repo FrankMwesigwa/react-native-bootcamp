@@ -1,0 +1,6 @@
+export const constants = {
+  ADD_CITY: 'ADD_CITY',
+  DELETE_CITY: 'DELETE_CITY',
+  SELECT_CITY: 'SELECT_CITY',
+  DESELECT_CITY: 'DESELECT_CITY'
+};

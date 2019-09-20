@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import Account from './src/Screen/AccountScreen';
+import AppContainer from './src/Navigation';
 
 class App extends Component {
   render() {
-    return <Account />;
+    return <AppContainer />;
   }
 }
 
